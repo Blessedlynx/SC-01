@@ -6,13 +6,41 @@ public class GameMaster
 {
     public static GameMaster Instance { get; private set; }
 
-    private Field gameField;
+    public Field GameField { get; private set; }
+    public CombinationAnalyzer Analyzer { get; private set; }
+
+    public readonly TeamsManager TeamsManager;
 
     public GameMaster()
     {
-        // ?
         Instance = this;
 
-        gameField = new Field();
+        GameField = new Field();
+        Analyzer = new CombinationAnalyzer(GameField);
+        
+        TeamsManager = new TeamsManager();
+
+        InitTeamsSelectors();
+    }
+
+    public void InitTeamsSelectors()
+    {
+        TeamsManager.Crosses.TeamSelector.ChangeTargetField(GameField);
+        TeamsManager.Zeroes.TeamSelector.ChangeTargetField(GameField);
+    }
+
+    public void TerminateCurrentTurn()
+    {
+        var winningTeam = Analyzer.AnalyzeWinner();
+        if (winningTeam is NullTeam)
+        {
+            // продолжаем игру
+            TeamsManager.StartNextTurn();
+        }
+        else
+        {
+            // заканчиваем игру
+            Debug.Log("Game ended! The winner is Team " + winningTeam.Name);
+        }
     }
 }
