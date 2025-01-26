@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2096189545060470968
+--- !u!1 &502164107591536662
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6478060860107524868}
-  - component: {fileID: 1507343749227399506}
-  - component: {fileID: 4287496374803122531}
+  - component: {fileID: 8539373121227177681}
+  - component: {fileID: 8152033651266017336}
+  - component: {fileID: 7336887303585813372}
   m_Layer: 5
-  m_Name: FieldCell
+  m_Name: FieldBorders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6478060860107524868
+--- !u!224 &8539373121227177681
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096189545060470968}
+  m_GameObject: {fileID: 502164107591536662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,23 +36,23 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256, y: 256}
+  m_SizeDelta: {x: 896, y: 896}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1507343749227399506
+--- !u!222 &8152033651266017336
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096189545060470968}
+  m_GameObject: {fileID: 502164107591536662}
   m_CullTransparentMesh: 1
---- !u!114 &4287496374803122531
+--- !u!114 &7336887303585813372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096189545060470968}
+  m_GameObject: {fileID: 502164107591536662}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64e03e713ca668a48b1d279ba07f6f9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 153c45f4d9a53314093d05be05d6fc08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
