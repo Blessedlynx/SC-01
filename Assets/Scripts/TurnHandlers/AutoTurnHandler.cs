@@ -27,11 +27,20 @@ public class AutoTurnHandler
 
         // Handle
         var targetCell = CombinationAnalyzer.Instance.GetRandomFreeCell();
-        // -> need to shift selector
+        FollowPath(TargetTeam.TeamSelector.CurrentSelectable as Cell, targetCell); // -> need to shift selector
         if (!TargetTeam.TeamSelector.CurrentSelectable.TryInteract(TargetTeam.TeamSelector))
         {
             Debug.LogError("Something went wrong!");
         }
         GameMaster.Instance.TerminateCurrentTurn();
+    }
+
+    private void FollowPath(Cell current, Cell target)
+    {
+        var path = PathFinder.FindPath(current, target);
+        for (int i = 0; i < path.Count; i++)
+        {
+            TargetTeam.TeamSelector.TryShiftSelector(path[i]);
+        }
     }
 }
